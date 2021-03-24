@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.container {
+.container, .main-container {
     width: 80%;
     margin: 0 auto;
 }
@@ -112,4 +112,60 @@ nav {
 h1 {
     margin-bottom: 30px;
     color: white;
+}
+
+/* main */
+main > hr {
+    margin: 0 10px;
+}
+
+/* description */
+.description {
+    background-color: #d3d3d3;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.description > h2 {
+    margin-bottom: 10px;
+}
+
+.description > p, section > p {
+    color: #818181;
+}
+
+/* main-container */
+.main-container {
+    padding: 20px 0 20px 20px;
+}
+
+section {
+    width: calc(33.33% - 20px);
+    height: 100%;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+
+section > h2 {
+    color: #7cbb02;
+}
+
+section > hr {
+    margin: 20px 130px;
+}
+
+.section-left > img {
+    width: 34%;
+}
+
+.section-center > img {
+    width: 58%;
+}
+
+.section-right > img {
+    width: 40%;
+}
+
+.section-center {
+    margin: 0 20px;
 }
