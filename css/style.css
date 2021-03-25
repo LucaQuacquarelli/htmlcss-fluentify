@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.container, .main-container {
+.container, .main-container, .plane-container {
     width: 80%;
     margin: 0 auto;
 }
@@ -29,10 +29,13 @@ header {
     position: relative;
     height: 100vh;
     background-image: url(../img/background-header.png);
-    background-color: #0c325a;
     background-position: 112% 105%;
     background-size: 65% auto;
     background-repeat: no-repeat;
+}
+
+header, .company-container {
+    background-color: #0c325a;
 }
 
 /* nav */
@@ -50,12 +53,14 @@ nav {
 .nav-link {
     width: 45%;
 }
+
 .link li {
     display: inline-block;
     list-style: none;
     padding: 0 8px;
 }
-.link a, .jumbotron a, .help a {
+
+.link a, .jumbotron a, .help a, .real a, .company a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
@@ -137,39 +142,42 @@ main > hr {
     margin-bottom: 10px;
 }
 
-.description > p, section > p, .data-text > p, .footer-list li{
+.description > p, section > p, .data-text > p, .rank-list li, .real-text > p, .worktime > p, .company > p {
     color: #818181;
 }
 
 /* main-container */
-.main-container {
+.main-container, .plane-container{
     padding: 20px 0 20px 20px;
 }
 
-section {
+.target, .plane {
     width: calc(33.33% - 20px);
     height: 100%;
-    padding: 10px 0 0 0;
+    padding-top: 10px; 
+}
+
+.target {
     text-align: center;
 }
 
-section > h2 {
+.target > h2 {
     color: #7cbb02;
 }
 
-section > hr {
+.target > hr {
     margin: 20px 130px;
 }
 
-.section-left > img {
+.target.section-left > img {
     width: 34%;
 }
 
-.section-center > img {
+.target.section-center > img {
     width: 58%;
 }
 
-.section-right > img {
+.target.section-right > img {
     width: 40%;
 }
 
@@ -178,24 +186,24 @@ section > hr {
 }
 
 /* data-container */
-.data-container {
+.data-container, .real-container, .company-container {
     width: 100%;
     padding: 50px 200px;
 }
 
-.data {
+.data, .real {
     width: calc(50% - 50px);
 }
 
-.data-img {
+.data-img, .real-img {
     margin-right: 50px;
 }
 
-.data-img > img {
+.data-img > img, .real-img > img {
     max-width: 100%;
 }
 
-.data-text {
+.data-text, .real-text {
     margin-left: 50px ;
 }
 
@@ -203,36 +211,36 @@ section > hr {
     font-size: 33px;
 }
 
-.data-text > p {
+.data-text > p, .real-text > p{
     font-size: 20px;
     margin: 20px 0 30px 0;
 }
 
-/* footer */
-footer {
+/* rank */
+.rank-container {
     width: 100%;
     line-height: 150px;
     padding: 0 150px;
     background-color: #d3d3d3;
 }
 
-.footer-title {
+.rank-title {
     width: 30%;
     height: 100%;
 }
 
-.footer-title > h2 {
+.rank-title > h2 {
     font-size: 33px;
 }
 
-.footer-list {
+.rank-list {
     float: right;
     width: 70%;
     height: 100%;
     position: relative;
 }
 
-.footer-list > ul {
+.rank-list > ul {
     position: absolute;
     right: 0;
 }
@@ -244,4 +252,129 @@ li > select {
     font-size: 18px;
     color: #818181;
     background-color: #d3d3d3;
+}
+
+/* real */
+.real {
+    position: relative;
+}
+.real-text > h2 {
+    font-size: 27px;
+}
+
+.real-text > p {
+    padding-bottom: 60px;
+}
+
+.real-text > a {
+    padding: 20px 25px 20px 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+
+.caption {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    text-align: center;
+}
+
+.caption, .worktime > a {
+    color: #afcadf;
+}
+
+/* work-time-container */
+.worktime-container {
+    width: 100%;
+}
+
+.worktime {
+    width: 50%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.worktime > img {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.worktime > p {
+    margin: 20px 0;
+}
+
+/* company-container */
+.company {
+    position: relative;
+    width: 30%;
+}
+
+.company > h2 {
+    color: white;
+}
+
+.company > p {
+    margin: 40px 0;
+    font-size: 14px;
+}
+
+.company > a {
+    padding: 10px 40px;
+}
+
+/* plane */
+
+.plane-title {
+    margin: 70px 0;
+    text-align: center;
+}
+.plane > img {
+    margin-bottom: 40px;
+}
+
+.plane.section-left > img {
+    width: 20%;
+}
+
+.plane.section-center > img {
+    width: 18%;
+}
+
+.plane.section-right > img {
+    width: 15%;
+}
+
+.plane > p {
+    margin-top: 20px;
+}
+
+.plane > hr {
+    margin: 20px 0;
+}
+
+.plane.section-left > hr {
+    border: 5px solid #afcadf;
+}
+
+.plane.section-left > a {
+    color: #afcadf;
+}
+
+.plane.section-center > hr {
+    margin-top: 40px;
+    border: 5px solid #fda500;
+}
+
+.plane.section-center > a {
+    color: #fda500;
+}
+
+.plane.section-right > hr {
+    margin-top: 43px;
+    border: 5px solid #80b703;
+}
+
+.plane.section-right > a {
+    color: #80b703;
 }
