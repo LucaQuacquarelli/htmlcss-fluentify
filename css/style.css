@@ -412,6 +412,8 @@ li > select {
     color: #80b703;
 }
 
+/* footer */
+/* faq */
 .faq {
     width: 100%;
     margin-top: 60px;
@@ -431,16 +433,15 @@ li > select {
     margin: 20px 0;
 }
 
+/* info */
 .info {
     width: 100%;
-    height: 500px;
     padding: 50px 60px;
     background-color: #17416b;
 }
 
 .page-link {
     width: 30%;
-    height: 400px;
 }
 
 .page-link > ul {
@@ -453,7 +454,6 @@ li > select {
 
 .company-info {
     width: 70%;
-    height: 400px;
     text-align: right;
 } 
 
